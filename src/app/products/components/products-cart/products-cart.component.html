@@ -1,0 +1,16 @@
+<h3>Cart</h3>
+<div class="cart-item" *ngFor="let product of productsInCart; let i = index">
+  <span>{{ product.name }}</span>
+  <span>{{ product.price | currency }}</span>
+  <button type="button" class="fancy-button-delete" (click)="onRemove(i)">
+    Remove
+  </button>
+</div>
+
+<div class="checkout">
+  <span>Total: {{ totalPrice || 0 | currency }}</span>
+
+  <button type="button" class="fancy-button" (click)="onCheckout()">
+    Checkout
+  </button>
+</div>
