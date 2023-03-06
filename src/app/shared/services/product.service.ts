@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { ProductModel } from '../models/products';
 
 @Injectable({
@@ -29,6 +28,5 @@ export class ProductsService {
 
   checkoutCart() {
     this.productsInCart = [];
-    console.log(this.productsInCart);
   }
 }
